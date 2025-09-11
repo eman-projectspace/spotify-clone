@@ -5,7 +5,7 @@
   width: 72%;
   border-radius: 10px;
   background-color: #121212;
-  height: 90vh;
+  height: 80vh;
   z-index: 1;
   overflow: auto;
   scrollbar-width: none;
@@ -122,4 +122,35 @@
   margin: auto;
   margin-top: 70px;
   margin-bottom: 50px;
+}
+
+.playbar {
+  position: fixed;
+  color: white;
+  height: 10vh;
+  background-color: #121212;
+  border-radius: 10px;
+  width: 72%;
+  border: 0;
+  top: 600px;
+  z-index: 10;
+  margin-left: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.playbar img {
+  filter: invert();
+  height: 20px;
+  cursor: pointer;
+}
+
+@media (max-width:600px) {
+  .playbar {
+    width: 100%;
+    margin: 0px;
+
+  }
 }

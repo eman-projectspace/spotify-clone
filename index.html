@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify</title>
+  <link rel="icon" type="image/x-icon" href="/imges/favicon.ico">
+
   <link rel="stylesheet" href="/styles/Header.css">
   <link rel="stylesheet" href="/styles/leftside.css">
   <link rel="stylesheet" href="/styles/Rightside.css">
   <link rel="stylesheet" href="/styles/footer.css">
   <link rel="stylesheet" href="/styles/uitility.css">
-  <link rel="stylesheet" href="/js/script.js">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,13 +30,13 @@
   <div class="header-cover">
     <div class="header">
       <div class="rigth-Header">
-        <div class="items"><img src="/logo.svg" alt=""></div>
-        <div class="items home"><img src="/home.svg" width="20px" alt="" title="Home"></div>
+        <div class="items"><img src="/svgs/logo.svg" alt=""></div>
+        <div class="items home"><img src="/svgs/home.svg" width="20px" alt="" title="Home"></div>
         <div class="input-container">
-          <div class="input-items input-items1"><img src="search.svg" width="20px" alt=""></div>
+          <div class="input-items input-items1"><img src="/svgs/search.svg" width="20px" alt=""></div>
           <input type="text" placeholder="What do you want lo listen?" class="input-txt">
           <div class="line">|</div>
-          <div class="input-items input-items2"><img title="Browse" src="/browse.svg" width="20px" alt=""></div>
+          <div class="input-items input-items2"><img title="Browse" src="/svgs/browse.svg" width="20px" alt=""></div>
         </div>
       </div>
       <div class="items">
@@ -69,7 +70,7 @@
     </div>
   </div>
 
-  <!-- Left Side -->
+  <!-- Main -->
   <div class="main">
     <div class="Left-Side-cover">
       <div class="Left-Side">
@@ -84,6 +85,13 @@
           <div id="box2-txt2">Its easy,we'all help you</div>
           <button id="create-playlist-btn">Create playlist</button>
         </div>
+
+        <div class="song-list">
+          <ul>
+
+          </ul>
+        </div>
+
         <div id="line"></div>
         <div class="box-3-cover">
           <div class="box3">
@@ -515,9 +523,21 @@
       <div class="line-hor"></div>
       <div class="last-txt">© 2025 Spotify AB</div>
     </div>
+    <!-- Playbar -->
+    <div class="playbar">
+      <div class="songinfo"></div>
+      <div class="songbuttons">
+        <img src="/imges/previous.png" alt="">
+        <img src="/imges/video-pause-button.png" alt="">
+        <img src="/imges/next.png" alt="">
+      </div>
+      <div class="songtime"></div>
 
+    </div>
+  </div>
 
   </div>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
