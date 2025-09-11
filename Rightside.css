@@ -1,0 +1,125 @@
+.Right-Side {
+  position: relative;
+  left: 110px;
+  top: 60px;
+  width: 72%;
+  border-radius: 10px;
+  background-color: #121212;
+  height: 90vh;
+  z-index: 1;
+  overflow: auto;
+  scrollbar-width: none;
+  /* hide scrollbar */
+
+  /* Adds scrollbars if content is larger */
+
+}
+
+
+#trending {
+  color: white;
+  margin: 25px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.songs-album {
+  width: 90%;
+  height: 270px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songs-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
+  flex-wrap: wrap;
+}
+
+.song-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 180px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.song-bg:hover {
+  background-color: #4b4646;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.songs-card img {
+  border-radius: 5px;
+}
+
+.song-title {
+  color: white;
+  width: 70%;
+}
+
+.song-title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.song-author {
+  color: gray;
+}
+
+.song-author:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*  */
+
+/*  */
+@media (max-width:720px) {
+
+  .Right-Side {
+    left: 80px;
+  }
+
+}
+
+@media (max-width:600px) {
+  .Right-Side {
+    left: 0px;
+    width: 100%;
+  }
+}
+
+
+.img {
+  border-radius: 50%;
+}
+
+.songs-album {
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-left: 40px;
+  /* no extra space at start */
+
+}
+
+.line-hor {
+  background-color: rgb(97, 95, 95);
+  width: 90%;
+  height: 1px;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}

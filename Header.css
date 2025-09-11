@@ -3,14 +3,22 @@
   padding: 0px;
 }
 
+.header-cover {
+  position: relative;
+}
+
 .header {
+  background-color: black;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #dad8d8;
-  height: 60px;
+  height: 70px;
   column-gap: 15px;
   padding: 0 20px;
+  width: 100%;
+  z-index: 100;
 }
 
 .rigth-Header {
@@ -34,6 +42,8 @@
   align-items: center;
   padding: 4px;
   width: 40px;
+  position: fixed;
+  left: 60px;
 }
 
 .home:hover {
@@ -45,15 +55,21 @@
 
 
 .input-container {
-  height: 45px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 480px;
+  width: 550px;
   margin-left: 5px;
   margin-right: 15px;
   background-color: #1f1f1f;
   border-radius: 30px;
+  position: relative;
+  left: 75px;
+}
+
+.input-txt {
+  color: red;
 }
 
 .input-items {
@@ -76,18 +92,23 @@ input {
   border: none;
   background-color: #1f1f1f;
   margin-right: 8px;
+  font-size: 17px;
   color: white;
-
 }
 
 
 .line {
   font-size: 25px;
+  margin-right: 15px;
+  margin-left: 60px;
+}
+
+.line2 {
+  font-size: 25px;
   margin-right: 5px;
 }
 
 .input-items2 {
-  margin-left: 5px;
   font-size: 20px;
 }
 
@@ -98,10 +119,11 @@ input {
 
 .items p {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   font-family: sans-serif;
-  color: #8f8f8f;
-  margin-left: 50px;
+  font-size: 17px;
+  color: #b9b9b9;
+  margin-left: 150px;
 }
 
 .txt:hover {
@@ -124,8 +146,10 @@ input {
 
 .install-text {
   display: flex;
-  font-family: sans-serif;
+  font-family: system-ui;
+  font-weight: bold;
   width: 125px;
+  font-size: 17px;
   align-items: center;
   color: #8f8f8f;
 }
@@ -136,6 +160,10 @@ input {
 }
 
 .signup-text {
+  font-weight: bold;
+  font-size: 17px;
+  font-family: system-ui;
+  margin-left: 20px;
   color: #8f8f8f;
   font-weight: bold;
 }
@@ -150,9 +178,11 @@ input {
   font-weight: bold;
   font-size: 15px;
   color: black;
+  font-family: system-ui;
+  font-size: 16px;
   height: 48px;
-  width: 90px;
-  border-radius: 42%;
+  width: 100px;
+  border-radius: 38%;
   border: none;
   margin-left: 20px;
 }
@@ -170,10 +200,12 @@ input {
 
   .rigth-Header {
     column-gap: 5px;
+
   }
 
   .left-header {
     column-gap: 2px;
+    margin-right: 70px;
   }
 
   .header {
@@ -216,6 +248,16 @@ input {
   .items p {
     display: none;
   }
+
+  .line2 {
+    display: none;
+  }
+
+  .install-text {
+    display: none;
+  }
+
+
 }
 
 @media (max-width:530px) {
