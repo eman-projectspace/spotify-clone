@@ -132,9 +132,15 @@
   border-radius: 10px;
   width: 72%;
   border: 0;
-  top: 600px;
+  top: 400px;
   z-index: 10;
   margin-left: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songbuttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,6 +151,33 @@
   filter: invert();
   height: 20px;
   cursor: pointer;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  bottom: 6px;
+  left: -4px;
+  transition: left 0.5s;
+
+}
+
+.seekbar {
+  height: 4px;
+  width: 95%;
+  border: 2px solid rgb(171, 171, 171);
+  position: absolute;
+  top: 50px;
+  cursor: pointer;
+}
+
+.songs-detail {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 @media (max-width:600px) {
