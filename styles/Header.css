@@ -222,7 +222,7 @@ input {
   }
 
   .rigth-Header {
-    width: 30%;
+    width: 45%;
   }
 
   .center-items p {
@@ -302,11 +302,34 @@ input {
     height: 30px;
     width: 30px;
     padding: 4px;
+    margin-right: 40px;
 
 
   }
 
   .install-text {
     display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .left-header {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+  }
+
+  .signup-text {
+    display: block !important;
+
+  }
+
+  .login-button button {
+    display: block !important;
+    margin-right: 10px;
   }
 }
