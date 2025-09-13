@@ -240,31 +240,48 @@
 
 @media (max-width:530px) {
 
-  .Left-Side,
-  .install-text,
-  .login-button button,
-  .signup-text,
-  #create-playlist-btn,
-  .box3,
-  .box4,
-  .box2,
-  #lib-txt {
+  .Left-Side {
     display: none;
   }
 
   .Left-Side.show {
     display: block;
     z-index: 1000;
+    width: 70%;
+    height: 72vh;
+    margin-top: 9px;
   }
+}
 
-  .box2 {
-    background-color: transparent;
-  }
+.Left-Side.show .box1,
+.Left-Side.show #lib-txt,
+.Left-Side.show .add,
+.Left-Side.show .box2,
+.Left-Side.show #create-playlist-btn,
+.Left-Side.show .song-list,
+.Left-Side.show #line {
+  display: block;
+}
 
+.Left-Side.show .box1 {
+  display: flex;
 
-  .Right-Side {
-    width: 88%;
-  }
+}
+
+.Left-Side.show .box2 {
+  display: flex;
+  background-color: #242424;
+}
+
+.install-text,
+.login-button button,
+.signup-text {
+  display: none;
+}
+
+.Right-Side {
+  width: 88%;
+}
 
 
 }
