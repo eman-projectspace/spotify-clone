@@ -1,5 +1,6 @@
 console.log("Lets write Javascript");
 let currentSong = new Audio();
+let songs;
 
 async function getSongs() {
   let a = await fetch("/songs")
@@ -32,20 +33,8 @@ const playMusic = (track, pause = false) => {
 
 async function main() {
 
-  //Menu toggle functionality
-  document.querySelector(".menu").addEventListener("click", () => {
-    const leftSide = document.querySelector(".Left-Side");
-    leftSide.classList.toggle("show");
-  });
-
-  //Add button functionality to hide sidebar
-  document.querySelector(".add").addEventListener("click", () => {
-    const leftSide = document.querySelector(".Left-Side");
-    leftSide.classList.remove("show");
-  });
-
-  //get the list of all the songs
-  let songs = await getSongs()
+  //Get the list of all the songs
+  songs = await getSongs()
   playMusic(songs[0], true)
   //Show all the songs in the playlist
   let songUL = document.querySelector(".song-list").getElementsByTagName("ul")[0]
@@ -119,11 +108,39 @@ async function main() {
     currentSong.currentTime = ((currentSong.duration) * percent) / 100
   })
 
-  //Add an event listner for hamburger
+  //Menu toggle functionality
+  document.querySelector(".menu").addEventListener("click", () => {
+    const leftSide = document.querySelector(".Left-Side");
+    leftSide.classList.toggle("show");
+  });
 
-  // document.querySelector(".add").addEventListener("click", () => {
-  //   document.querySelector(".left").style.left = "0"
-  // })
+  //Add button functionality to hide sidebar
+  document.querySelector(".close").addEventListener("click", () => {
+    const leftSide = document.querySelector(".Left-Side");
+    leftSide.classList.remove("show");
+  });
+
+
+  //Previous Song
+  previous.addEventListener("click", () => {
+    console.log("previous clicked")
+    console.log(currentSong)
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    console.log(songs, index)
+    if ((index - 1) >= 0)
+      playMusic(songs[index - 1])
+  })
+
+
+  next.addEventListener("click", () => {
+    console.log("Next clicked")
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    console.log(songs, index)
+    if ((index + 1) >= length)
+      playMusic(songs[index + 1])
+  })
+
+
 
 }
 main()
