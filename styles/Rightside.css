@@ -15,6 +15,9 @@
 
 }
 
+.menu {
+  display: none;
+}
 
 #trending {
   color: white;
@@ -88,6 +91,11 @@
 
 /*  */
 @media (max-width:720px) {
+  .menu {
+    display: block;
+    filter: invert();
+    margin: 20px;
+  }
 
   .Right-Side {
     left: 80px;

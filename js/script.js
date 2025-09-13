@@ -32,6 +32,18 @@ const playMusic = (track, pause = false) => {
 
 async function main() {
 
+  //Menu toggle functionality
+  document.querySelector(".menu").addEventListener("click", () => {
+    const leftSide = document.querySelector(".Left-Side");
+    leftSide.classList.toggle("show");
+  });
+
+  //Add button functionality to hide sidebar
+  document.querySelector(".add").addEventListener("click", () => {
+    const leftSide = document.querySelector(".Left-Side");
+    leftSide.classList.remove("show");
+  });
+
   //get the list of all the songs
   let songs = await getSongs()
   playMusic(songs[0], true)

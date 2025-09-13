@@ -233,6 +233,11 @@
   }
 }
 
+.Left-Side.hidden {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
 @media (max-width:530px) {
 
   .Left-Side,
@@ -245,6 +250,11 @@
   .box2,
   #lib-txt {
     display: none;
+  }
+
+  .Left-Side.show {
+    display: block;
+    z-index: 1000;
   }
 
   .box2 {
