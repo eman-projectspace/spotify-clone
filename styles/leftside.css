@@ -1,8 +1,7 @@
 .main {
-  height: 90vh;
+  height: 100vh;
   background-color: black;
   display: flex;
-  justify-content: space-evenly;
 
 }
 
@@ -52,6 +51,7 @@
 }
 
 /* cREATE plAYLIst */
+
 .box2 {
   background-color: #242424;
   border-radius: 10px;
@@ -97,6 +97,7 @@
 
 
 /* Songs Sec */
+
 .song-list {
   height: 200px;
   width: 100%;
@@ -242,6 +243,7 @@
 
   .Left-Side {
     display: none;
+    padding-bottom: 100px;
   }
 
   .Left-Side.show {
@@ -251,37 +253,38 @@
     height: 72vh;
     margin-top: 9px;
   }
+
+  .Left-Side.show .box1,
+  .Left-Side.show #lib-txt,
+  .Left-Side.show .add,
+  .Left-Side.show .box2,
+  .Left-Side.show #create-playlist-btn,
+  .Left-Side.show .song-list,
+  .Left-Side.show #line {
+    display: block;
+  }
+
+  .Left-Side.show .box1 {
+    display: flex;
+
+  }
+
+  .Left-Side.show .box2 {
+    display: flex;
+    background-color: #242424;
+  }
+
+
+  .box4,
+  .install-text,
+  .login-button button,
+  .signup-text {
+    display: none;
+  }
 }
 
-.Left-Side.show .box1,
-.Left-Side.show #lib-txt,
-.Left-Side.show .add,
-.Left-Side.show .box2,
-.Left-Side.show #create-playlist-btn,
-.Left-Side.show .song-list,
-.Left-Side.show #line {
-  display: block;
-}
-
-.Left-Side.show .box1 {
-  display: flex;
-
-}
-
-.Left-Side.show .box2 {
-  display: flex;
-  background-color: #242424;
-}
-
-.install-text,
-.login-button button,
-.signup-text {
-  display: none;
-}
-
+/* 
 .Right-Side {
   width: 88%;
-}
 
-
-}
+} */
