@@ -187,6 +187,7 @@ input {
   font-weight: bold;
 }
 
+
 .signup-text:hover {
   color: #c6c6c6;
   cursor: pointer;
@@ -203,6 +204,12 @@ input {
   width: 100px;
   border-radius: 38%;
   border: none;
+}
+
+.login-button button:hover {
+  cursor: pointer;
+  background-color: rgb(222, 204, 204);
+  transition: 1s all ease;
 }
 
 .menu {

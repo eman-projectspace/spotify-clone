@@ -232,6 +232,7 @@
   .box-3-cover {
     display: none;
   }
+
 }
 
 .Left-Side.hidden {
@@ -275,7 +276,6 @@
   }
 
 
-  .box4,
   .install-text,
   .login-button button,
   .signup-text {

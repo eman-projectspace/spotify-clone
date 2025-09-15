@@ -1,12 +1,13 @@
 console.log("Lets write Javascript");
 let currentSong = new Audio();
+// let songs;
 let songs = [
-  "/music1.mp3",
-  "/music2.mp3",
-  "/music3.mp3",
-  "/music4.mp3",
-
+  "music1.mp1",
+  "music1.mp2",
+  "music1.mp3",
+  "music1.mp4"
 ];
+
 
 let currfolder;
 // async function getSongs(folder) {
@@ -26,6 +27,7 @@ let currfolder;
 //   }
 //   return songs
 // }
+
 async function getSongs(folder) {
   currfolder = folder;
   return songs; // return your array instead of fetching folder
@@ -155,7 +157,7 @@ async function main() {
     if (currentSong.volume > 0) {
       document.querySelector(".volume>img").src = "/imges/speaker-filled-audio-tool.png";
     } else {
-      document.querySelector(".volume>img").src = "/imges/volume-mute.png";
+      document.querySelector(".volume>img").src = "/imges/volume-mute (1).png";
     }
 
   })
@@ -165,12 +167,12 @@ async function main() {
     console.log(e.target)
     console.log("changing", e.target.src)
     if (e.target.src.includes("/imges/speaker-filled-audio-tool.png")) {
-      e.target.src = e.target.src.replace("/imges/speaker-filled-audio-tool.png", "/imges/volume-mute.png")
+      e.target.src = e.target.src.replace("/imges/speaker-filled-audio-tool.png", "/imges/volume-mute (1).png")
       currentSong.volume = 0;
       document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
     }
     else {
-      e.target.src = e.target.src.replace("/imges/volume-mute.png", "/imges/speaker-filled-audio-tool.png")
+      e.target.src = e.target.src.replace("/imges/volume-mute (1).png", "/imges/speaker-filled-audio-tool.png")
       currentSong.volume = .10;
       document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
     }
