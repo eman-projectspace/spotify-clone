@@ -1,25 +1,35 @@
 console.log("Lets write Javascript");
 let currentSong = new Audio();
-let songs;
+let songs = [
+  "/music1.mp3",
+  "/music2.mp3",
+  "/music3.mp3",
+  "/music4.mp3",
+
+];
+
 let currfolder;
+// async function getSongs(folder) {
+//   currfolder = folder;
+//   let a = await fetch(`songs/${folder}/`)
+//   let response = await a.text();
+//   // console.log(response);
+//   let div = document.createElement("div")
+//   div.innerHTML = response;
+//   let as = div.getElementsByTagName("a")
+//   let songs = []
+//   for (let index = 0; index < as.length; index++) {
+//     const element = as[index];
+//     if (element.href.endsWith(".mp3")) {
+//       songs.push(element.href.split(`/${folder}/`)[1])
+//     }
+//   }
+//   return songs
+// }
 async function getSongs(folder) {
   currfolder = folder;
-  let a = await fetch(`songs/${folder}/`)
-  let response = await a.text();
-  // console.log(response);
-  let div = document.createElement("div")
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a")
-  let songs = []
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`/${folder}/`)[1])
-    }
-  }
-  return songs
+  return songs; // return your array instead of fetching folder
 }
-
 
 const playMusic = (track, pause = false) => {
   currentSong.src = `/songs/${currfolder}/` + track
