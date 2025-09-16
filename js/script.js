@@ -2,10 +2,10 @@ console.log("Lets write Javascript");
 let currentSong = new Audio();
 // let songs;
 let songs = [
-  "music1.mp1",
-  "music1.mp2",
   "music1.mp3",
-  "music1.mp4"
+  "music2.mp3",
+  "music3.mp3",
+  "music4.mp3"
 ];
 
 
@@ -59,7 +59,6 @@ async function main() {
               <img src="/imges/musical-note.png" height="20px" alt="">
               <div class="info">
                 <div>${song.replaceAll("%50", " ")}</div>
-                <div>Eman</div>
               </div>
               <div class="playnow"> <span>play now</span> <img src="/imges/play-button.png" height="15px"
                   style="filter: invert();" alt=""></div>

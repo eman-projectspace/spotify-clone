@@ -124,8 +124,14 @@
   cursor: pointer;
   padding: 12px 10px;
   margin: 5px;
-
+  font-size: 17px;
+  font-family: monospace;
+  justify-content: space-between;
 }
+
+
+
+
 
 .song-list ul li:hover {
   border: 2px solid rgb(173, 164, 164);
@@ -139,9 +145,8 @@
 }
 
 .playnow span {
-  font-size: 10px;
-  width: 50px;
   margin: 0px;
+  margin-right: 5px;
 }
 
 #line {
@@ -217,6 +222,10 @@
 }
 
 @media (max-width:930px) {
+  .song-list ul li {
+    font-size: 10px;
+  }
+
   .box-3-cover {
     display: flex;
     flex-wrap: wrap;
@@ -229,6 +238,16 @@
 }
 
 @media (max-width:755px) {
+  .song-list li {
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+
+  .playnow span {
+    display: none;
+  }
+
   .box-3-cover {
     display: none;
   }
@@ -241,6 +260,9 @@
 }
 
 @media (max-width:530px) {
+  .playnow span {
+    display: block;
+  }
 
   .Left-Side {
     display: none;

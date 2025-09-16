@@ -275,7 +275,9 @@ input {
 }
 
 @media (max-width:840px) {
-
+  .rigth-Header {
+    width: 30%;
+  }
 
   .center-items,
   .items p {

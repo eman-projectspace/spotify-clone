@@ -102,9 +102,6 @@
   margin-bottom: 50px;
 }
 
-.volume {
-  cursor: pointer;
-}
 
 /*  RESPONSIVEnESS*/
 @media (max-width:720px) {
